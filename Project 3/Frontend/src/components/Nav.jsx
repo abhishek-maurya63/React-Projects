@@ -38,6 +38,18 @@ const Nav = () => {
             Create Product
           </NavLink>
           <NavLink
+            to="/cart"
+            className={({ isActive }) =>
+              `hover:text-cyan-400 transition-colors duration-200 ${
+                isActive
+                  ? "text-white font-semibold border-b-2 border-cyan-400 pb-1"
+                  : ""
+              }`
+            }
+          >
+            Cart
+          </NavLink>
+          <NavLink
             to="/admin/user-profile"
             className={({ isActive }) =>
               `hover:text-cyan-400 transition-colors duration-200 ${

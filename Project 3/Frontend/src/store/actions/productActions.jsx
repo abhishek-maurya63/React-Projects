@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import axios from "../../api/AxiosConfig";
 import { loadProduct } from "../reducers/productSlice";
+
 export const asyncLoadProducts = () => async (dispatch, getstate) => {
   try {
     const { data } = await axios.get("/products");

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { nanoid } from "nanoid";
 import { asyncCreateProduct } from "../../store/actions/productActions";
+import { toast } from "react-toastify";
 const CreateProduct = () => {
   const { register, reset, handleSubmit } = useForm();
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ const CreateProduct = () => {
     console.log(product);
     dispatch(asyncCreateProduct(product));
     navigate("/products");
+    toast.success("Product created successfully");
   };
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900 overflow-hidden">

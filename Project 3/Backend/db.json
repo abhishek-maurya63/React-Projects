@@ -5,7 +5,12 @@
       "username": "Abhishek",
       "email": "maurya63abhishek@gmail.com",
       "password": "1234",
-      "cart": [],
+      "cart": [
+        {
+          "productId": "9slq4Y4QFiRYmqllvvKFB",
+          "quantity": 1
+        }
+      ],
       "isAdmin": true
     },
     {
@@ -13,25 +18,51 @@
       "username": "Abhishek Maurya",
       "email": "abhishek@xyz",
       "password": "12345",
+      "cart": [
+        {
+          "productId": "9slq4Y4QFiRYmqllvvKFD",
+          "quantity": 1
+        },
+        {
+          "productId": "9slq4Y4QFiRYmqllvvKFB",
+          "quantity": 10
+        }
+      ],
       "isAdmin": false
     }
   ],
   "products": [
     {
-      "id": "dxgjfvjhnsvjhdbb",
-      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      "price": "150",
-      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "category": "men's clothing",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+      "id": "9slq4Y4QFiRYmqllvvKFB",
+      "title": "bag ",
+      "price": "100",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "description": "this is the best bag for your all weather needs ",
+      "category": "backpack"
     },
     {
-      "id": "KAzfz7UgXgDfBuZ1425fz",
-      "title": "fxg",
-      "price": "789",
-      "image": "https://plus.unsplash.com/premium_photo-1749201890981-0a0e78a97a70?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8 ",
-      "description": "zzgfdxjh",
-      "category": "agsd"
+      "id": "9slq4Y4QFiRYmqllvvKFC",
+      "title": "shoes ",
+      "price": "200",
+      "image": "https://fakestoreapi.com/img/71YX2W6b1EL._AC_UL640_QL65_.jpg",
+      "description": "these shoes are perfect for running and casual wear ",
+      "category": "footwear"
+    },
+    {
+      "id": "9slq4Y4QFiRYmqllvvKFD",
+      "title": "watch ",
+      "price": "150",
+      "image": "https://fakestoreapi.com/img/61p0Zk8s5EL._AC_SL1500_.jpg",
+      "description": "a stylish watch for everyday use ",
+      "category": "accessories"
+    },
+    {
+      "id": "9slq4Y4QFiRYmqllvvKFv",
+      "title": "bag ",
+      "price": "100",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "description": "this is the best bag for your all weather needs ",
+      "category": "backpack"
     }
   ]
 }

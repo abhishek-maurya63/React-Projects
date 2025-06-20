@@ -1,14 +1,47 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { asyncUpdateUser } from "../store/actions/userActions";
+import { toast } from "react-toastify";
 
 const Products = () => {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.userReducer.users);
   const products = useSelector((state) => state.productReducer.products);
-  console.log(products);
+
   const navigate = useNavigate();
   const toProductDetail = (id) => {
     navigate(`/product/${id}`);
   };
+
+  const addToCart = (id, dets) => {
+    if (!user) {
+      alert("User not logged");
+      return;
+    }
+
+    const copyCart = [...(user.cart || [])];
+    const existingProIdx = copyCart.findIndex((pro) => pro.productId === id);
+
+    if (existingProIdx > -1) {
+      const updatedItem = {
+        ...copyCart[existingProIdx],
+        quantity: copyCart[existingProIdx].quantity + 1,
+      };
+
+      copyCart[existingProIdx] = updatedItem;
+    } else {
+      const cartItem = {
+        productId: id,
+        quantity: 1,
+      };
+
+      copyCart.push(cartItem);
+    }
+    dispatch(asyncUpdateUser(user.id, { ...user, cart: copyCart }));
+
+    toast.success("Product added to cart");
+  };
+
   const rederProducts = products.map((product) => {
     return (
       <div
@@ -30,7 +63,13 @@ const Products = () => {
 
         <div className="flex justify-between items-center">
           <p className="text-cyan-400 font-bold text-md">₹ {product.price}</p>
-          <button className="bg-cyan-600 hover:bg-cyan-700 px-4 py-1 rounded-md text-sm">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              addToCart(product.id);
+            }}
+            className="bg-cyan-600 hover:bg-cyan-700 px-4 py-1 rounded-md text-sm"
+          >
             Add to Cart
           </button>
         </div>

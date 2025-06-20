@@ -51,16 +51,16 @@ export const asyncLogoutUser = () => async (dispatch, getState) => {
   }
 };
 
-export const asyncUpdateUser = (id, user) => async (dispatch, getState) => {
-  try {
-    const { data } = await axios.patch("/users/" + id, user);
-    console.log(data);
-    dispatch(asyncUserCurrent());
-    localStorage.setItem("user", JSON.stringify(updatedUser.data));
-  } catch (error) {
-    console.log(error);
-  }
-};
+export const asyncUpdateUser =
+  (id, updatedUser) => async (dispatch, getState) => {
+    try {
+      const { data } = await axios.patch("/users/" + id, updatedUser);
+      dispatch(loadUser(data));
+      localStorage.setItem("user", JSON.stringify(data));
+    } catch (error) {
+      console.log("Error updating user:", error);
+    }
+  };
 
 export const asyncDeleteUser = (id) => async (dispatch, getState) => {
   try {

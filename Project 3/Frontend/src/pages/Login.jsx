@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { asyncUserLogin } from "../store/actions/userActions";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { register, reset, handleSubmit } = useForm();
@@ -10,6 +11,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const loginHandler = (user) => {
     dispatch(asyncUserLogin(user));
+    toast.success("Login successful");
     navigate("/");
   };
   return (

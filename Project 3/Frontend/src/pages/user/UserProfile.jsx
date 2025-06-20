@@ -6,6 +6,7 @@ import {
   asyncDeleteUser,
   asyncUpdateUser,
 } from "../../store/actions/userActions";
+import { toast } from "react-toastify";
 
 const UserProfile = () => {
   const navigate = useNavigate();
@@ -34,11 +35,14 @@ const UserProfile = () => {
     if (!user) return; // Prevent error if user is not loaded
     dispatch(asyncUpdateUser(user.id, data));
     navigate("/");
+    toast.success("User updated successfully");
   };
 
   const userDeleteHandler = () => {
     if (!user) return; // Prevent error if user is not loaded
     dispatch(asyncDeleteUser(user.id));
+    navigate("/");
+    toast.success("User deleted successfully");
   };
   return user ? (
     <div className="min-h-screen bg-gray-900 text-white px-6 py-10">
