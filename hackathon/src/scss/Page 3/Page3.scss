@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Argentum-Novus";
+  src: url("../../assets/fonts/ArgentumNovus-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.section-3 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: "Argentum-Novus", sans-serif;
+  background-color: #312e31;
+
+  .text {
+    width: 100%;
+    height: 25%;
+    // background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    h1 {
+      width: auto;
+      height: 55%;
+      font-size: 3.8rem;
+      text-align: left;
+      color: #4a4b4c;
+      line-height: 2.5rem;
+      padding: 0.5rem;
+      letter-spacing: 0.2rem;
+
+      @media (min-width: 768px) {
+        font-size: 6.2rem;
+        text-align: left;
+        color: #4a4b4c;
+        letter-spacing: 0.2rem;
+        padding-top: 1.3rem;
+      }
+    }
+  }
+  .product {
+    width: 100%;
+    height: 60%;
+    // background-color: rgb(11, 36, 28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .prod {
+      width: 100%;
+      height: 100%;
+      // background-color: white;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+
+      img {
+        height: 70%;
+        width: auto;
+        object-fit: contain;
+        rotate: 10deg;
+        @media (min-width: 768px) {
+          height: 100%;
+        }
+      }
+
+      .prodDescription {
+        height: auto;
+
+        h1 {
+          color: white;
+          font-size: 1rem;
+
+          @media (min-width: 768px) {
+            font-size: 3rem;
+          }
+        }
+        p {
+          font-size: 0.7rem;
+          color: #4a4b4c;
+          @media (min-width: 768px) {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .prodDescription-1 {
+        width: 20%;
+        padding-left: 2rem;
+        @media (min-width: 768px) {
+          width: auto;
+          padding-left: 0;
+        }
+      }
+      .prodDescription-2 {
+        width: 25%;
+        margin-right: 2rem;
+        @media (min-width: 768px) {
+          width: auto;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .cta {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .nav-arrows {
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .buy {
+      width: 30%;
+      height: auto;
+      padding: 0.8rem;
+      border-radius: 2rem;
+      font-size: large;
+      background-color: #dff3f3;
+
+      @media (min-width: 768px) {
+        width: 10%;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
