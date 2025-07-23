@@ -1,6 +1,11 @@
 import React from "react";
 import { href, Route, Routes } from "react-router-dom";
 import ProductDetails from "../components/ProductDetails";
+import Products from "../components/Products";
+import Home from "../components/Home";
+import Signup from "../components/Signup";
+import About from "../components/About";
+
 
 const Mainroutes = () => {
   return (
@@ -8,8 +13,8 @@ const Mainroutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/products" element={<Products />} />
       <Route path="/products/details/:productId" element={<ProductDetails />} />
-      <Route path="/faq" element={<FAQ />} />
-      {/* Add more as needed */}
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   );
 };

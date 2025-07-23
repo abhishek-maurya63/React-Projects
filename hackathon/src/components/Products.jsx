@@ -1,8 +1,24 @@
-import "../scss/Page 3/Page3.scss";
+import "../scss/Products/Products.scss";
 import can from "../assets/can.webp";
 import forward from "../assets/forward-arrow.svg";
 import backward from "../assets/backward-arrow.svg";
-const Page3 = () => {
+import { useNavigate } from "react-router-dom";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+const Products = () => {
+  const navigate = useNavigate();
+  const buyHandler = () => {
+    navigate(`/products/details/:productId`);
+  };
+
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.from(".section-3", {
+      scale: 0.8,
+    });
+  });
+
   return (
     <section className="section-3">
       <div className="text">
@@ -37,7 +53,9 @@ const Page3 = () => {
           <img src={backward} alt="" />
         </div>
 
-        <button className="buy">details</button>
+        <button className="buy" onClick={() => buyHandler()}>
+          Buy
+        </button>
 
         <div className="nav-arrows backward">
           <img src={forward} alt="" />
@@ -47,4 +65,4 @@ const Page3 = () => {
   );
 };
 
-export default Page3;
+export default Products;

@@ -4,7 +4,7 @@ import "../scss/ProductDetails/ProductDetails.scss";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import CanModel from "./canModel";
+import CanModel from "./ThreeD_Model";
 import { Suspense } from "react";
 
 const ProductDetails = () => {
@@ -23,8 +23,8 @@ const ProductDetails = () => {
               enableZoom={true}
               minDistance={5}
               maxDistance={6}
-              minPolarAngle={Math.PI / 2.3}
-              maxPolarAngle={Math.PI / 3}
+              minPolarAngle={Math.PI / 3}
+              maxPolarAngle={Math.PI / 2.3}
               enablePan={false}
             />
           </Canvas>

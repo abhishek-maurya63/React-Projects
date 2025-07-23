@@ -16,7 +16,7 @@ const Page1 = () => {
       yoyo: true,
       ease: "sine.inOut",
     });
-  });
+  }, []);
 
   return (
     <div className="hero-section">
