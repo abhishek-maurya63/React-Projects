@@ -1,62 +1,47 @@
-import { NavLink } from "react-router-dom"; // React Router
+import { NavLink } from "react-router-dom";
 import star from "../assets/star.png";
-import lock from "../assets/lock-alt-svgrepo-com.svg";
+import "../scss/Nav/Nav.scss";
 
 const Nav = () => {
+  let menuOpen = "open";
   return (
-    <nav className="w-[95vw] h-[3rem] rounded-[2rem] flex items-center justify-between overflow-hidden border-3 fixed top-[1rem] z-10 sm:w-[95vw] sm:h-[3rem]">
-      <div className="flex items-center justify-center">
-        <div className="w-[2.5rem] h-[2.5rem] bg-black rounded-[50%] m-1 flex items-center justify-center sm:w-[2.5rem] sm:h-[2.5rem]">
+    <nav className="nav">
+      <div className="nav__logo">
+        <div className="nav__logo-icon">
           <img src={star} alt="" />
         </div>
-        <h1 className="text-2xl font-bold">wow</h1>
+        <h1 className="nav__logo-title">wow</h1>
       </div>
 
-      <div className="hidden md:flex w-[60%] p-0.5 items-center justify-center">
-        <ul className="flex items-center justify-center gap-10">
-          <li className="md:text-[.6rem] lg:text-[1rem] font-medium uppercase">
+      <div className="nav__links">
+        <ul>
+          <li>
             <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-[#e1f3ef] rounded-[2rem] pt-1 pb-1 pl-1.5 pr-1.5  border-2  "
-                  : ""
-              }
+              className={({ isActive }) => (isActive ? "nav__active-link" : "")}
               to="/"
             >
               Home
             </NavLink>
           </li>
-          <li className="md:text-[.6rem] lg:text-[1rem] font-medium uppercase">
+          <li>
             <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-[#e1f3ef] rounded-[2rem] pt-1 pb-1 pl-1.5 pr-1.5  border-2  "
-                  : ""
-              }
+              className={({ isActive }) => (isActive ? "nav__active-link" : "")}
               to="/products"
             >
               Products
             </NavLink>
           </li>
-          <li className="md:text-[.6rem] lg:text-[1rem] font-medium uppercase">
+          <li>
             <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-[#e1f3ef] rounded-[2rem] pt-1 pb-1 pl-1.5 pr-1.5  border-2  "
-                  : ""
-              }
+              className={({ isActive }) => (isActive ? "nav__active-link" : "")}
               to="/about"
             >
               About
             </NavLink>
           </li>
-          <li className="md:text-[.6rem] lg:text-[1rem] font-medium uppercase">
+          <li>
             <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-[#e1f3ef] rounded-[2rem] pt-1 pb-1 pl-1.5 pr-1.5  border-2  "
-                  : ""
-              }
+              className={({ isActive }) => (isActive ? "nav__active-link" : "")}
               to="/signup"
             >
               Signup
@@ -65,8 +50,15 @@ const Nav = () => {
         </ul>
       </div>
 
-      <div className="w-[2.5rem] h-[2.5rem] bg-[#dcf5f1] rounded-[50%] m-1 flex items-center justify-center border-3 sm:w-[2.5rem] sm:h-[2.5rem]">
-        <img className="w-[2rem] h-[2rem]" src={lock} alt="" />
+      <div
+        className="nav__hamburgerContainer"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <div className={`hamburger ${menuOpen ? "open" : ""}`}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </nav>
   );

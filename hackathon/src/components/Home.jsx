@@ -4,6 +4,7 @@ import Page2 from "./Page2";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import Footer from "./Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,6 +33,9 @@ const Home = () => {
       </div>
       <div>
         <Page2 />
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );

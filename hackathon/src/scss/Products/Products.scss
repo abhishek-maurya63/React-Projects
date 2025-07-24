@@ -11,73 +11,68 @@
   position: relative;
   font-family: "Argentum-Novus", sans-serif;
   background-color: #312e31;
+  overflow: hidden;
 
-  .text {
+  .textContainer {
     width: 100%;
     height: 25%;
-    // background-color: aquamarine;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding: 2.3rem 1rem 0;
+    box-sizing: border-box;
+    gap: 0;
 
-    h1 {
-      width: auto;
-      height: 55%;
-      font-size: 3.8rem;
-      text-align: left;
-      color: #4a4b4c;
-      line-height: 2.5rem;
-      padding: 0.5rem;
-      letter-spacing: 0.2rem;
+    font-size: clamp(2rem, 1rem + 4vw, 5rem);
+    color: #4a4b4c;
+    letter-spacing: 0.1rem;
+    line-height: 1.2;
 
-      @media (min-width: 768px) {
-        font-size: 6.2rem;
-        text-align: left;
-        color: #4a4b4c;
-        letter-spacing: 0.2rem;
-        padding-top: 1.3rem;
-      }
+    .text {
+      height: auto;
+      max-width: 95%;
     }
   }
   .product {
+    position: relative;
     width: 100%;
     height: 60%;
-    // background-color: rgb(11, 36, 28);
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .prod {
-      width: 100%;
-      height: 100%;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      // opacity: 0;
-      transform: translateY(200px) scale(0.9);
-      position: absolute; /* so they can stack */
+      position: absolute;
+      top: 50%;
       left: 50%;
-      transform: translate(-50%, 100px); /* center align */
-
-      @media (min-width: 768px) {
-        width: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.5s ease;
+      opacity: 0;
+      filter: blur(4px); // default to blurred
+      width: 30%;
+      z-index: 1;
+      @media (max-width: 768px) {
+        width: 60%;
       }
 
       img {
         height: 70%;
         width: auto;
         object-fit: contain;
-        rotate: 10deg;
+        rotate: -5deg;
+
         @media (min-width: 768px) {
-          height: 100%;
+          height: 32rem;
         }
       }
 
       .prodDescription {
         height: auto;
+        // visibility: hidden;
+        display: none;
 
         h1 {
           color: white;
@@ -121,25 +116,26 @@
     align-items: center;
     justify-content: space-evenly;
 
-    .nav-arrows {
-      width: 3rem;
-      height: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .buy {
-      width: 30%;
-      height: auto;
-      padding: 0.8rem;
-      border-radius: 2rem;
-      font-size: large;
-      background-color: #dff3f3;
+    // .nav-arrows {
+    //   width: 3rem;
+    //   height: 3rem;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    // }
 
-      @media (min-width: 768px) {
-        width: 10%;
-        font-size: 1.5rem;
-      }
+    .buy {
+      // width: 30%;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 1.5rem;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .buy:hover {
+      display: block;
+      // filter: drop-shadow(0 0 10px #e50c0c);
     }
   }
 }

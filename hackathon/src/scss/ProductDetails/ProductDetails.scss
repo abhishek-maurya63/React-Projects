@@ -33,20 +33,17 @@
 }
 
 .product-model {
-  flex: 1 1 350px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 65vh; /* Give the container a specific height relative to the viewport */
 
-  .canModel {
+  img {
     max-width: 100%;
     width: 100%;  /* Make the canvas fill the container's width */
     height: 100%; /* Make the canvas fill the container's height */
     border-radius: 1rem;
     background: #fff;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-    padding: 1rem;
   }
 }
 

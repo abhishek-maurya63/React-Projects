@@ -2,32 +2,12 @@ import React from "react";
 import can from "../assets/can.webp";
 import "../scss/ProductDetails/ProductDetails.scss";
 
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import CanModel from "./ThreeD_Model";
-import { Suspense } from "react";
-
 const ProductDetails = () => {
   return (
     <div className="product-page">
       <div className="product-details">
         <div className="product-model">
-          <Canvas className="canModel" camera={{ position: [0, 0, 5] }}>
-            <ambientLight intensity={1} />
-            <directionalLight position={[5, 5, 5]} />
-            <Suspense fallback={null}>
-              <CanModel />
-            </Suspense>
-            <OrbitControls
-              enableRotate={true}
-              enableZoom={true}
-              minDistance={5}
-              maxDistance={6}
-              minPolarAngle={Math.PI / 3}
-              maxPolarAngle={Math.PI / 2.3}
-              enablePan={false}
-            />
-          </Canvas>
+          <img src={can} alt="" />
         </div>
 
         <div className="product-info">

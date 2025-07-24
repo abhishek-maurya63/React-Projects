@@ -1,92 +1,172 @@
+@charset "UTF-8";
 .about-page {
-  background-color: #f5f5f4;
-  color: #1b1b1b;
-  padding: 4rem 1.5rem;
-}
-@media (min-width: 768px) {
-  .about-page {
-    padding: 4rem 6rem;
-  }
-}
-.about-page h1,
-.about-page h2 {
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
-.about-page h1 {
-  font-size: 2.75rem;
-}
-@media (min-width: 768px) {
-  .about-page h1 {
-    font-size: 3.5rem;
-  }
-}
-.about-page h2 {
-  font-size: 2rem;
-}
-@media (min-width: 768px) {
-  .about-page h2 {
-    font-size: 2.5rem;
-  }
-}
-.about-page p {
-  font-size: 1rem;
-  line-height: 1.75;
+  font-family: "Poppins", sans-serif;
   color: #333;
+  background: #fff;
 }
-.about-page .hero-section {
-  max-width: 750px;
-  margin-bottom: 4rem;
+.about-page .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 3rem;
+  height: 100%;
 }
-.about-page .founder-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 6rem;
+.about-page .hero {
+  background: url("../../assets/about.jpg");
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1rem;
+  background-size: cover;
+  background-position: center;
+  margin-top: 5rem;
+}
+.about-page .hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.about-page .hero p {
+  font-size: 1.2rem;
+}
+.about-page .founder {
+  background: #fff;
+}
+.about-page .founder .founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12rem;
   align-items: center;
 }
-@media (min-width: 768px) {
-  .about-page .founder-section {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+.about-page .founder .founder-grid .text {
+  border-left: 5px solid #ff6ea1;
+  padding-left: 1.5rem;
+  overflow: hidden;
 }
-.about-page .founder-section img {
-  width: 16rem;
-  height: 16rem;
+.about-page .founder .founder-grid .text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff6ea1;
+}
+.about-page .founder .founder-grid .image img {
+  width: 100%;
+  border-radius: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
-.about-page .founder-section .founder-info {
-  max-width: 600px;
-}
-.about-page .testimonial-section {
-  background-color: #ffffff;
-  border-radius: 1.5rem;
-  padding: 3rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-}
-.about-page .testimonial-section h2 {
+.about-page .mission {
+  background: #f5f5f5;
   text-align: center;
-  margin-bottom: 3rem;
 }
-.about-page .testimonial-section .testimonials {
+.about-page .mission h2 {
+  color: #ffd166;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-page .mission p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+.about-page .usps .usps-grid {
   display: grid;
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
-@media (min-width: 768px) {
-  .about-page .testimonial-section .testimonials {
-    grid-template-columns: repeat(3, 1fr);
+.about-page .usps .usps-grid .card {
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.about-page .usps .usps-grid .card.pink {
+  background: #ff6ea1;
+}
+.about-page .usps .usps-grid .card.blue {
+  background: #72dbf2;
+  color: #1f1f1f;
+}
+.about-page .usps .usps-grid .card.yellow {
+  background: #ffd166;
+  color: #1f1f1f;
+}
+.about-page .usps .usps-grid .card h3 {
+  margin-bottom: 0.5rem;
+}
+.about-page .usps .usps-grid .pink:hover {
+  scale: 1.1;
+  background-color: #d24979;
+  transition: all ease-in-out 0.2s;
+}
+.about-page .usps .usps-grid .blue:hover {
+  scale: 1.1;
+  background-color: #3c8c9e;
+  transition: all ease-in-out 0.2s;
+}
+.about-page .usps .usps-grid .yellow:hover {
+  scale: 1.1;
+  background-color: #ca9f3c;
+  transition: all ease-in-out 0.2s;
+}
+.about-page .stats {
+  background: #fff;
+}
+.about-page .stats .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+.about-page .stats .stats-grid h2 {
+  font-size: 2rem;
+  color: #72dbf2;
+}
+.about-page .stats .stats-grid .count-up-vibe::after {
+  content: "%";
+}
+.about-page .stats .stats-grid .count-up-rating::after {
+  content: "★";
+}
+.about-page .stats .stats-grid p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.about-page .testimonials {
+  background: #f9f9f9;
+  text-align: center;
+}
+.about-page .testimonials h2 {
+  font-size: 2rem;
+  color: #ff6ea1;
+  margin-bottom: 2rem;
+}
+.about-page .testimonials .testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.about-page .testimonials .testimonial-grid .quote {
+  background: #fff;
+  padding: 2rem;
+  border-left: 5px solid #ffd166;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+.about-page .testimonials .testimonial-grid .quote:hover {
+  border-left: 50px solid #ffd166;
+  transition: all ease-in-out 0.2s;
+}
+.about-page .testimonials .testimonial-grid p {
+  font-style: italic;
+}
+.about-page .testimonials .testimonial-grid h4 {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .about-page .founder-grid,
+  .about-page .testimonial-grid {
+    grid-template-columns: 1fr;
   }
-}
-.about-page .testimonial-section .testimonials .testimonial p {
-  font-size: 0.95rem;
-  color: #666;
-}
-.about-page .testimonial-section .testimonials .testimonial h4 {
-  font-weight: 600;
-  margin-top: 0.75rem;
+  .about-page .hero h1 {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=About.css.map */
