@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "title": "FrostFizz Classic Cola",
+            "description": "A refreshing burst of bold cola flavor, perfect for cooling down on hot days or adding sparkle to your moments.",
+            "price": "85$",
+            "image_URL": "/can.webp"
+        },
+        {
+            "id": "2",
+            "title": "FrostFizz Lemon Zing",
+            "description": "A zesty twist of lemon blended with crisp fizz — energizing and incredibly smooth with every sip.",
+            "price": "87$",
+            "image_URL": "/can1.png"
+        },
+        {
+            "id": "3",
+            "title": "FrostFizz Berry Blast",
+            "description": "Packed with the juicy goodness of mixed berries and a sparkling finish, this drink is a fruity explosion in a can.",
+            "price": "69$",
+            "image_URL": "/can2.webp"
+        },
+        {
+            "id": "4",
+            "title": "FrostFizz Ginger Spark",
+            "description": "A bold and spicy ginger-infused soda that kicks in with warmth and refreshes like no other.",
+            "price": "96$",
+            "image_URL": "/can3.png"
+        }
+    ]
+}

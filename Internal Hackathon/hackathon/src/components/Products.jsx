@@ -1,5 +1,4 @@
 import "../scss/Products/Products.scss";
-import can from "../assets/can.webp";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -7,16 +6,26 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Typed from "typed.js";
 import { useEffect, useRef, useState } from "react";
 import Magnet from "../react bits/Magnet";
+import { useDispatch, useSelector } from "react-redux";
+import { asyncLoadProducts } from "../store/Actions/ProductActions";
 
 const Products = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [centerIndex, setCenterIndex] = useState(3);
   const productsRef = useRef([]);
   const containerRef = useRef(null);
   const isScrolling = useRef(false);
 
-  const handlePurchase = () => {
-    navigate("/products/details/:productId");
+  const { product } = useSelector((state) => state.product);
+  const productList = product || [];
+
+  useEffect(() => {
+    dispatch(asyncLoadProducts());
+  }, []);
+
+  const handlePurchase = (productId) => {
+    navigate(`/products/details/${productId}`);
   };
 
   gsap.registerPlugin(ScrollTrigger);
@@ -27,7 +36,8 @@ const Products = () => {
 
   const applyProductPosition = (center) => {
     const prods = productsRef.current;
-    const totalVisible = 5;
+    // const totalVisible = 5;
+    const totalVisible = Math.min(productList.length, 5);
     const half = Math.floor(totalVisible / 2);
 
     prods.forEach((el, i) => {
@@ -132,29 +142,29 @@ const Products = () => {
     };
   }, [centerIndex]);
 
-  const productList = Array(7).fill(can);
-
   return (
     <section className="section-3" ref={containerRef}>
       <div className="textContainer">
         <span className="text"></span>
       </div>
       <div className="product">
-        {productList.map((img, i) => (
+        {productList.map((prod, i) => (
           <div
-            key={i}
+            key={prod.id || i}
             className={`prod prod-${i + 1}`}
             ref={(el) => (productsRef.current[i] = el)}
           >
-            <img src={img} alt={`can-${i}`} />
+            <img
+              onClick={() => handlePurchase(prod.id)}
+              src={prod.image_URL}
+              alt={`can-${i}`}
+            />
           </div>
         ))}
       </div>
       <div className="cta">
         <Magnet padding={2000} disabled={false} magnetStrength={50}>
-          <h1 className="buy" onClick={handlePurchase}>
-            Purchase
-          </h1>
+          <h1 className="buy">click on the product to buy</h1>
         </Magnet>
       </div>
     </section>

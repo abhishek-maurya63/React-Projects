@@ -1,32 +1,38 @@
 import React from "react";
-import can from "../assets/can.webp";
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "../scss/ProductDetails/ProductDetails.scss";
 
 const ProductDetails = () => {
+  const { id } = useParams();
+  const { product } = useSelector((state) => state.product);
+
+  const selectedProduct = product.find((p) => p._id === id);
+
+  if (!selectedProduct) {
+    return <p>Product not found!</p>;
+  }
+
   return (
     <div className="product-page">
       <div className="product-details">
         <div className="product-model">
-          <img src={can} alt="" />
+          <img src={selectedProduct.image_URL} alt={selectedProduct.name} />
         </div>
 
         <div className="product-info">
-          <h1>CBD Lemonade</h1>
-          <p className="description">
-            Our CBD Lemonade offers a refreshing twist on a classic, combining
-            the tangy taste of lemonade with the calming effects of CBD. Perfect
-            for a relaxing afternoon or a post-workout recovery.
-          </p>
+          <h1>{selectedProduct.name}</h1>
+          <p className="description">{selectedProduct.description}</p>
 
           <div className="details">
             <p>
-              <strong>CBD Content:</strong> 25mg
+              <strong>CBD Content:</strong> {selectedProduct.cbd_content}
             </p>
             <p>
-              <strong>Volume:</strong> 12 fl oz (355ml)
+              <strong>Volume:</strong> {selectedProduct.volume}
             </p>
             <p>
-              <strong>Flavor:</strong> Lemonade
+              <strong>Flavor:</strong> {selectedProduct.flavor}
             </p>
           </div>
 
