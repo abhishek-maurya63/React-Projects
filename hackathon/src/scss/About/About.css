@@ -1,172 +1,188 @@
-@charset "UTF-8";
 .about-page {
   font-family: "Poppins", sans-serif;
   color: #333;
   background: #fff;
+  line-height: 1.6;
+}
+.about-page section {
+  padding: 4rem 0;
 }
 .about-page .container {
   width: 90%;
   max-width: 1200px;
-  margin: auto;
-  padding: 4rem 3rem;
-  height: 100%;
+  margin: 0 auto;
 }
-.about-page .hero {
-  background: url("../../assets/about.jpg");
-  color: #fff;
-  text-align: center;
-  padding: 5rem 1rem;
-  background-size: cover;
-  background-position: center;
-  margin-top: 5rem;
-}
-.about-page .hero h1 {
-  font-size: 3rem;
+.about-page h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
-.about-page .hero p {
-  font-size: 1.2rem;
+.about-page p {
+  font-size: 1.1rem;
+  color: #555;
 }
 .about-page .founder {
-  background: #fff;
+  background: #f9f9f9;
 }
 .about-page .founder .founder-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12rem;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
 }
 .about-page .founder .founder-grid .text {
+  flex: 1;
   border-left: 5px solid #ff6ea1;
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   overflow: hidden;
 }
 .about-page .founder .founder-grid .text h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ff6ea1;
+}
+.about-page .founder .founder-grid .image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-page .founder .founder-grid .image img {
   width: 100%;
-  border-radius: 1rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: auto;
+  border-radius: 12px;
 }
 .about-page .mission {
-  background: #f5f5f5;
   text-align: center;
 }
 .about-page .mission h2 {
-  color: #ffd166;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  color: #4079ff;
 }
 .about-page .mission p {
   max-width: 700px;
-  margin: auto;
-  font-size: 1.1rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.about-page .usps {
+  background: #fff;
 }
 .about-page .usps .usps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  justify-content: space-between;
   gap: 2rem;
 }
 .about-page .usps .usps-grid .card {
+  flex: 1;
+  border-left: 5px solid #4079ff;
   padding: 2rem;
-  border-radius: 1rem;
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #f1f6ff;
+  transition: all 0.3s ease;
 }
-.about-page .usps .usps-grid .card.pink {
-  background: #ff6ea1;
-}
-.about-page .usps .usps-grid .card.blue {
-  background: #72dbf2;
-  color: #1f1f1f;
-}
-.about-page .usps .usps-grid .card.yellow {
-  background: #ffd166;
-  color: #1f1f1f;
+.about-page .usps .usps-grid .card:hover {
+  scale: 1.03;
+  background: #e0efff;
 }
 .about-page .usps .usps-grid .card h3 {
   margin-bottom: 0.5rem;
 }
-.about-page .usps .usps-grid .pink:hover {
-  scale: 1.1;
-  background-color: #d24979;
-  transition: all ease-in-out 0.2s;
+.about-page .usps .usps-grid .pink {
+  border-left-color: #ff6ea1;
 }
-.about-page .usps .usps-grid .blue:hover {
-  scale: 1.1;
-  background-color: #3c8c9e;
-  transition: all ease-in-out 0.2s;
+.about-page .usps .usps-grid .blue {
+  border-left-color: #4079ff;
 }
-.about-page .usps .usps-grid .yellow:hover {
-  scale: 1.1;
-  background-color: #ca9f3c;
-  transition: all ease-in-out 0.2s;
+.about-page .usps .usps-grid .yellow {
+  border-left-color: #ffc107;
 }
 .about-page .stats {
-  background: #fff;
+  background: #f9f9f9;
 }
 .about-page .stats .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
+}
+.about-page .stats .stats-grid > div {
+  flex: 1 1 200px;
   text-align: center;
+  padding: 1rem;
+  min-width: 140px;
 }
-.about-page .stats .stats-grid h2 {
-  font-size: 2rem;
-  color: #72dbf2;
+.about-page .stats .stats-grid > div h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
-.about-page .stats .stats-grid .count-up-vibe::after {
-  content: "%";
-}
-.about-page .stats .stats-grid .count-up-rating::after {
-  content: "★";
-}
-.about-page .stats .stats-grid p {
-  font-size: 0.9rem;
-  color: #555;
-}
-.about-page .testimonials {
-  background: #f9f9f9;
-  text-align: center;
-}
-.about-page .testimonials h2 {
-  font-size: 2rem;
-  color: #ff6ea1;
-  margin-bottom: 2rem;
+.about-page .stats .stats-grid > div p {
+  font-size: 1rem;
 }
 .about-page .testimonials .testimonial-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .about-page .testimonials .testimonial-grid .quote {
-  background: #fff;
+  flex: 1 1 300px;
   padding: 2rem;
-  border-left: 5px solid #ffd166;
-  border-radius: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  border-left: 5px solid #4079ff;
+  background: #f1f6ff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 .about-page .testimonials .testimonial-grid .quote:hover {
-  border-left: 50px solid #ffd166;
-  transition: all ease-in-out 0.2s;
+  background: #e0efff;
 }
-.about-page .testimonials .testimonial-grid p {
-  font-style: italic;
-}
-.about-page .testimonials .testimonial-grid h4 {
+.about-page .testimonials .testimonial-grid .quote h4 {
   margin-top: 1rem;
-  font-weight: 500;
+  font-weight: 600;
 }
-@media (max-width: 768px) {
-  .about-page .founder-grid,
-  .about-page .testimonial-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 992px) {
+  .about-page .founder-grid {
+    flex-direction: column;
   }
-  .about-page .hero h1 {
-    font-size: 2rem;
+  .about-page .founder-grid .text {
+    border-left: 4px solid #ff6ea1;
+    padding-left: 1.5rem;
+  }
+  .about-page .founder-grid .image {
+    margin-top: 2rem;
+  }
+  .about-page .founder-grid .image img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .about-page .usps-grid {
+    flex-direction: column;
+  }
+  .about-page .usps-grid .card {
+    width: 100%;
+  }
+  .about-page .testimonial-grid {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .about-page h2 {
+    font-size: 1.8rem;
+  }
+  .about-page .mission p,
+  .about-page .testimonials p,
+  .about-page .testimonials h4,
+  .about-page .stats p {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+  .about-page .container {
+    padding: 2rem 1rem;
+  }
+  .about-page .stats-grid > div {
+    padding: 1rem 0.5rem;
+  }
+}
+@media (hover: none) {
+  .about-page .card:hover,
+  .about-page .quote:hover {
+    scale: 1;
+    background-color: inherit;
   }
 }/*# sourceMappingURL=About.css.map */

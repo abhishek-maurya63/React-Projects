@@ -176,66 +176,6 @@ const Page2 = () => {
           <div className="svgContainer">
             <img src={truck} alt="" />
           </div>
-          <h1>Orgainic</h1>
-          <div className="svgContainer">
-            <img src={bamboo} alt="" />
-          </div>
-          <h1>Stylish design</h1>
-          <div className="svgContainer">
-            <img src={gift} alt="" />
-          </div>
-          <h1>Free world-wide shipping</h1>
-          <div className="svgContainer">
-            <img src={truck} alt="" />
-          </div>
-          <h1>Orgainic</h1>
-          <div className="svgContainer">
-            <img src={bamboo} alt="" />
-          </div>
-          <h1>Stylish design</h1>
-          <div className="svgContainer">
-            <img src={gift} alt="" />
-          </div>
-          <h1>Free world-wide shipping</h1>
-          <div className="svgContainer">
-            <img src={truck} alt="" />
-          </div>
-          <h1>Orgainic</h1>
-          <div className="svgContainer">
-            <img src={bamboo} alt="" />
-          </div>
-          <h1>Stylish design</h1>
-          <div className="svgContainer">
-            <img src={gift} alt="" />
-          </div>
-          <h1>Free world-wide shipping</h1>
-          <div className="svgContainer">
-            <img src={truck} alt="" />
-          </div>
-          <h1>Orgainic</h1>
-          <div className="svgContainer">
-            <img src={bamboo} alt="" />
-          </div>
-          <h1>Stylish design</h1>
-          <div className="svgContainer">
-            <img src={gift} alt="" />
-          </div>
-          <h1>Free world-wide shipping</h1>
-          <div className="svgContainer">
-            <img src={truck} alt="" />
-          </div>
-          <h1>Orgainic</h1>
-          <div className="svgContainer">
-            <img src={bamboo} alt="" />
-          </div>
-          <h1>Stylish design</h1>
-          <div className="svgContainer">
-            <img src={gift} alt="" />
-          </div>
-          <h1>Free world-wide shipping</h1>
-          <div className="svgContainer">
-            <img src={truck} alt="" />
-          </div>
         </div>
       </div>
     </div>

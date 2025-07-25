@@ -1,0 +1,44 @@
+@keyframes slideDownFade {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.mobileMenu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: white;
+    z-index: 999;
+    padding: 2rem 1.5rem;
+    animation: slideDownFade 0.3s ease-out;
+  }
+  .mobileMenu ul {
+    list-style: none;
+    padding: 0;
+  }
+  .mobileMenu ul li {
+    margin-bottom: 1rem;
+  }
+  .mobileMenu ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  .mobileMenu ul li a:hover {
+    color: #000;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+}/*# sourceMappingURL=MobileMenu.css.map */

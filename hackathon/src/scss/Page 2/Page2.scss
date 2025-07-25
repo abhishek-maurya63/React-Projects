@@ -121,7 +121,7 @@
   justify-content: center;
 
   h1 {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     color: black;
     text-align: center;
     font-weight: 600;
@@ -154,11 +154,9 @@
   }
 
   h1 {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     color: black;
     text-align: center;
-
-    font-weight: 600;
 
     @media (min-width: 640px) {
       font-size: 1.2rem;
