@@ -1,0 +1,239 @@
+.about-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+
+  section {
+    padding: 4rem 0;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  // ==== FOUNDER ====
+  .founder {
+    background: #f9f9f9;
+
+    .founder-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+
+      .text {
+        flex: 1;
+        border-left: 5px solid #ff6ea1;
+        padding-left: 2rem;
+        overflow: hidden;
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      .image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+
+  // ==== MISSION ====
+  .mission {
+    text-align: center;
+
+    h2 {
+      color: #4079ff;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+    }
+  }
+
+  // ==== USPs ====
+  .usps {
+    background: #fff;
+
+    .usps-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+
+      .card {
+        flex: 1;
+        border-left: 5px solid #4079ff;
+        padding: 2rem;
+        border-radius: 10px;
+        background: #f1f6ff;
+        transition: all 0.3s ease;
+
+        &:hover {
+          scale: 1.03;
+          background: #e0efff;
+        }
+
+        h3 {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .pink {
+        border-left-color: #ff6ea1;
+      }
+
+      .blue {
+        border-left-color: #4079ff;
+      }
+
+      .yellow {
+        border-left-color: #ffc107;
+      }
+    }
+  }
+
+  // ==== STATS ====
+  .stats {
+    background: #f9f9f9;
+
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+
+      > div {
+        flex: 1 1 200px;
+        text-align: center;
+        padding: 1rem;
+        min-width: 140px;
+
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  // ==== TESTIMONIALS ====
+  .testimonials {
+    .testimonial-grid {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .quote {
+        flex: 1 1 300px;
+        padding: 2rem;
+        border-left: 5px solid #4079ff;
+        background: #f1f6ff;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #e0efff;
+        }
+
+        h4 {
+          margin-top: 1rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  // ==== MEDIA QUERIES ====
+  @media (max-width: 992px) {
+    .founder-grid {
+      flex-direction: column;
+
+      .text {
+        border-left: 4px solid #ff6ea1;
+        padding-left: 1.5rem;
+      }
+
+      .image {
+        margin-top: 2rem;
+
+        img {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+
+    .usps-grid {
+      flex-direction: column;
+
+      .card {
+        width: 100%;
+      }
+    }
+
+    .testimonial-grid {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .mission p,
+    .testimonials p,
+    .testimonials h4,
+    .stats p {
+      font-size: 0.95rem;
+      padding: 0 0.5rem;
+    }
+
+    .container {
+      padding: 2rem 1rem;
+    }
+
+    .stats-grid > div {
+      padding: 1rem 0.5rem;
+    }
+  }
+
+  // Touch-device hover fixes
+  @media (hover: none) {
+    .card:hover,
+    .quote:hover {
+      scale: 1;
+      background-color: inherit;
+    }
+  }
+}

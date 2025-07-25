@@ -1,0 +1,188 @@
+.about-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+}
+.about-page section {
+  padding: 4rem 0;
+}
+.about-page .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-page h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.about-page p {
+  font-size: 1.1rem;
+  color: #555;
+}
+.about-page .founder {
+  background: #f9f9f9;
+}
+.about-page .founder .founder-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.about-page .founder .founder-grid .text {
+  flex: 1;
+  border-left: 5px solid #ff6ea1;
+  padding-left: 2rem;
+  overflow: hidden;
+}
+.about-page .founder .founder-grid .text h2 {
+  font-size: 2rem;
+}
+.about-page .founder .founder-grid .image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-page .founder .founder-grid .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.about-page .mission {
+  text-align: center;
+}
+.about-page .mission h2 {
+  color: #4079ff;
+}
+.about-page .mission p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.about-page .usps {
+  background: #fff;
+}
+.about-page .usps .usps-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.about-page .usps .usps-grid .card {
+  flex: 1;
+  border-left: 5px solid #4079ff;
+  padding: 2rem;
+  border-radius: 10px;
+  background: #f1f6ff;
+  transition: all 0.3s ease;
+}
+.about-page .usps .usps-grid .card:hover {
+  scale: 1.03;
+  background: #e0efff;
+}
+.about-page .usps .usps-grid .card h3 {
+  margin-bottom: 0.5rem;
+}
+.about-page .usps .usps-grid .pink {
+  border-left-color: #ff6ea1;
+}
+.about-page .usps .usps-grid .blue {
+  border-left-color: #4079ff;
+}
+.about-page .usps .usps-grid .yellow {
+  border-left-color: #ffc107;
+}
+.about-page .stats {
+  background: #f9f9f9;
+}
+.about-page .stats .stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.about-page .stats .stats-grid > div {
+  flex: 1 1 200px;
+  text-align: center;
+  padding: 1rem;
+  min-width: 140px;
+}
+.about-page .stats .stats-grid > div h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.about-page .stats .stats-grid > div p {
+  font-size: 1rem;
+}
+.about-page .testimonials .testimonial-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-page .testimonials .testimonial-grid .quote {
+  flex: 1 1 300px;
+  padding: 2rem;
+  border-left: 5px solid #4079ff;
+  background: #f1f6ff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.about-page .testimonials .testimonial-grid .quote:hover {
+  background: #e0efff;
+}
+.about-page .testimonials .testimonial-grid .quote h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+@media (max-width: 992px) {
+  .about-page .founder-grid {
+    flex-direction: column;
+  }
+  .about-page .founder-grid .text {
+    border-left: 4px solid #ff6ea1;
+    padding-left: 1.5rem;
+  }
+  .about-page .founder-grid .image {
+    margin-top: 2rem;
+  }
+  .about-page .founder-grid .image img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .about-page .usps-grid {
+    flex-direction: column;
+  }
+  .about-page .usps-grid .card {
+    width: 100%;
+  }
+  .about-page .testimonial-grid {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .about-page h2 {
+    font-size: 1.8rem;
+  }
+  .about-page .mission p,
+  .about-page .testimonials p,
+  .about-page .testimonials h4,
+  .about-page .stats p {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+  .about-page .container {
+    padding: 2rem 1rem;
+  }
+  .about-page .stats-grid > div {
+    padding: 1rem 0.5rem;
+  }
+}
+@media (hover: none) {
+  .about-page .card:hover,
+  .about-page .quote:hover {
+    scale: 1;
+    background-color: inherit;
+  }
+}/*# sourceMappingURL=About.css.map */

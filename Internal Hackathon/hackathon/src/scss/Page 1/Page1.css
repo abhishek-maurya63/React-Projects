@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "Argentum-Novus";
+  src: url("../../assets/fonts/ArgentumNovus-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.hero-section {
+  width: 100vw;
+  height: 60vh;
+  background-color: #ffeeec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: "Argentum-Novus", sans-serif;
+}
+@media (min-width: 640px) {
+  .hero-section {
+    height: 100vh;
+  }
+}
+@media (min-width: 768px) {
+  .hero-section {
+    height: 100vh;
+  }
+}
+
+.hero-content {
+  height: auto;
+  width: 60%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media (min-width: 640px) {
+  .hero-content {
+    width: 50%;
+    background-color: transparent;
+  }
+}
+@media (min-width: 768px) {
+  .hero-content {
+    width: 25%;
+    background-color: transparent;
+  }
+}
+
+.burst {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.can {
+  width: 100%;
+  height: 100%;
+  transform: rotate(6deg);
+}
+
+.chill {
+  font-size: 4rem;
+  font-weight: bold;
+  position: absolute;
+  top: 30%;
+  left: 1%;
+  rotate: -5deg;
+  color: #313130;
+}
+@media (min-width: 640px) {
+  .chill {
+    font-size: 10rem;
+    left: 4%;
+    top: 30%;
+  }
+}
+@media (min-width: 768px) {
+  .chill {
+    font-size: 12rem;
+    top: 13%;
+    left: 17%;
+  }
+}
+
+.fun {
+  font-size: 4rem;
+  font-weight: bold;
+  position: absolute;
+  bottom: 25%;
+  right: 3%;
+  rotate: 7deg;
+  color: #313130;
+}
+@media (min-width: 640px) {
+  .fun {
+    font-size: 10rem;
+    right: 4%;
+    top: 30%;
+  }
+}
+@media (min-width: 768px) {
+  .fun {
+    font-size: 13rem;
+    top: 60%;
+    right: 22%;
+  }
+}
+
+.and {
+  font-size: 15rem;
+  font-weight: bold;
+  position: absolute;
+  top: 15%;
+  right: 6%;
+  rotate: -5deg;
+  color: #f69683;
+}
+@media (min-width: 640px) {
+  .and {
+    font-size: 10rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 768px) {
+  .and {
+    font-size: 20rem;
+    top: 35%;
+    left: 75%;
+  }
+}
+
+.eye {
+  width: 6rem;
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  rotate: -7deg;
+}
+@media (min-width: 640px) {
+  .eye {
+    width: 15rem;
+    top: 80%;
+    left: 20%;
+  }
+}
+@media (min-width: 768px) {
+  .eye {
+    width: 15rem;
+    top: 50%;
+    left: 20%;
+  }
+}/*# sourceMappingURL=Page1.css.map */

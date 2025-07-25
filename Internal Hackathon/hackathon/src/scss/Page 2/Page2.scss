@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Argentum-Novus";
+  src: url("../../assets/fonts/ArgentumNovus-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.section-2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  font-family: "Argentum-Novus", sans-serif;
+
+  @media (min-width: 640px) {
+    height: 100vh;
+  }
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
+}
+
+.content1 {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: start;
+  gap: 10%;
+  // background: #551c1c;
+
+  @media (min-width: 640px) {
+    height: 50%;
+  }
+  @media (min-width: 768px) {
+    height: 70%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0;
+  }
+}
+
+.imgContainer {
+  width: 80%;
+  height: 60%;
+  // background-color: aqua;
+
+  @media (min-width: 768px) {
+    width: 25%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.textContainer {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  // background: #997e7e;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    gap: 10%;
+  }
+}
+
+.textContainer h1 {
+  font-size: 2.8rem;
+  text-align: left;
+  font-weight: 700;
+  line-height: 1;
+  z-index: 1;
+
+  @media (min-width: 640px) {
+    font-size: 3.5rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 5rem;
+  }
+}
+
+.designElementContainer {
+  width: 100%;
+  height: 45%;
+  position: relative;
+}
+
+.rectangle {
+  width: 20%;
+  height: 40%;
+  background-color: #fdf694;
+  border-radius: 1rem;
+  border: 2px solid black;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 0.5rem;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+
+    @media (min-width: 640px) {
+      font-size: 1.2rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.oval {
+  width: 20%;
+  height: 50%;
+  background-color: rgb(7, 7, 46);
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 640px) {
+    width: 20%;
+    height: 40%;
+    background-color: #551c1c;
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-size: 0.5rem;
+    color: black;
+    text-align: center;
+
+    @media (min-width: 640px) {
+      font-size: 1.2rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+#oval1 {
+  top: 20%;
+  left: 0;
+  background-color: #e1f3f2;
+}
+
+#oval2 {
+  top: 0;
+  left: 45%;
+  rotate: -15deg;
+  transform-origin: center;
+  background: #f0a487;
+}
+
+#oval3 {
+  top: 30%;
+  left: 75%;
+  rotate: 15deg;
+  transform-origin: center;
+  background: #fdf0ec;
+}
+
+.content2 {
+  width: 100%;
+  height: 15vh;
+  background-color: #fdf0ec;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    flex-shrink: 0; // Prevent shrinking
+  }
+
+  .svgContainer {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #eea489;
+
+    img {
+      width: 70%;
+      height: 70%;
+      object-fit: cover;
+    }
+  }
+
+  .marquee {
+    width: 100%;
+    height: 15vh;
+    background-color: #fdf0ec;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+}

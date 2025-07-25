@@ -1,0 +1,124 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #2c2c2c;
+  color: #fff;
+  padding: 4rem 6rem;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100vw;
+
+  .footer-left {
+    flex: 1;
+    min-width: 280px;
+
+    .footer-heading {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .email-box {
+      display: flex;
+      margin-top: 2rem;
+      border: 2px solid #fff;
+      border-radius: 999px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 450px;
+
+      input {
+        padding: 1rem 1.5rem;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: white;
+        width: 100%;
+
+        &::placeholder {
+          color: #ccc;
+        }
+      }
+
+      button {
+        padding: 1rem 1.5rem;
+        background: #c4f0e0;
+        color: #000;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        white-space: nowrap;
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+
+  .footer-right {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+
+
+    .smiley {
+      height: 70px;
+      margin-bottom: 1rem;
+    }
+
+    .copyright {
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+
+    .footer-left,
+    .footer-right {
+      width: 100%;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .footer-right {
+      align-items: flex-start;
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    .footer-heading {
+      font-size: 2.5rem;
+    }
+
+    .email-box {
+      flex-direction: column;
+      border-radius: 1.5rem;
+
+      input {
+        width: 100%;
+        border-bottom: 1px solid #fff;
+      }
+
+      button {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid #fff;
+        border-radius: 0;
+      }
+    }
+
+    .smiley {
+      // height: 120px;
+      align-self: flex-start;
+    }
+  }
+}
